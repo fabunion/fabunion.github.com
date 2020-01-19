@@ -1,0 +1,38 @@
+Use external axis
+============================================
+Sometimes we need print a large scale object,we need the help of external axis
+
+Create start pose
+--------------------------------------------
+In rhino,create A and B points.
+
+.. code:: console
+
+    A:[0,0,0]
+    B:[0, 3000, 0]
+
+Use Line component to generate a line
+
+.. image:: img/a7.png
+
+Add components
+--------------------------------------------
+Add Metalweldtool toolhead,KR20r1810 robot,TJLabAxis external axis，and connect them as figure:
+
+Now you drag simulate slider,you can find the robot cannot move along the external axis,so it cannot run the whole path,because we have not set the external axis value
+
+.. image:: img/a8.png
+
+Add external axis value
+--------------------------------------------
+Connect components as figure below:
+
+.. image:: img/a9.png
+
+The reason for these components is to generate the same count of external axis value as the count of path points,now external axis value is 0~2700(with this value,robot can run well).
+
+.. image:: img/a10.png
+
+Now,drag the simulation slider,you can see the robot print well.
+
+.. image:: img/a11.png

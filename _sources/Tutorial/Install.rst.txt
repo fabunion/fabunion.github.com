@@ -1,0 +1,11 @@
+Install
+============================================
+
+1. From `Here <https://www.food4rhino.com/app/furobot>`_ download install files
+
+
+2. Copy **FabUnionRobot.gha** and **ABB.Robotics.Controllers.PC.dll** to Grasshopper Componnet Library(for example:"C:\Users\YourUsername\AppData\Roaming\Grasshopper\Libraries")
+
+
+3. Restart Rhino,finish.
+

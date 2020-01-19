@@ -1,0 +1,49 @@
+Getting started
+============================================
+
+Create curve
+--------------------------------------------
+In rhino,create A,B,C points
+
+.. code:: console
+
+    A: [650,-200,0]
+    B: [750, 0, 0]
+    C: [650,200, 0]
+
+
+In Rhino Menu: ``Curve>Free-form>Interpolate`` points click ABC points,enter to finish.
+
+.. image:: img/a1.png
+
+The curve created,now we make robot move along this curve.
+
+Create component
+--------------------------------------------
+Make sure to save the gh file in local file path,name can be any as you like.
+Create a ``Curve component``,and pick up the newly created curve.
+Divide the curvce by ``divide component``,keep the parameters as default.
+Add ``MoveCmd component`` (in command group) to canvas:
+
+.. image:: img/a2.png
+
+Connect the output of ``Divide component`` to input of ``MoveCmd component``,and keep other parameter as default
+Then,add following component to canvas:
+
+* Number slider(make sure domain between 0.00~1.00) 
+* LisghtPlasticToolhead(in ``Tool|Root|Other`` group) 
+* KR6r900 (in ``Robot`` group) 
+
+then connect as figure below:
+
+.. image:: img/a3.png
+
+Simulate and generate program
+--------------------------------------------
+
+Check the save path of gh file,you will find a .src file with same name as gh file. No doubt,this file is offline program of KUKA.You can copy this file to KUKA controller(or by network) ,then it is necessary to set the same toolhead parameter in KUKA pad,then run the program,now you can see the same movement as simulation in real robot!
+
+.. image:: img/a4.png
+
+.. note::
+    About ``MoveCmd command``,this case we use its Line mode,Line mode means move from one point to another point, in straight line path. In this case,the curve is divided into many small segments,in real and simulation,robot also move in line,just a short line,so looks like a curve.
