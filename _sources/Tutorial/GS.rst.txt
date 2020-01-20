@@ -12,7 +12,7 @@ In rhino,create A,B,C points
     C: [650,200, 0]
 
 
-In Rhino Menu:  :guilabel:`Curve`> :guilabel:`Free-form`> :guilabel:`Interpolate` points click ABC points,enter to finish.
+In Rhino Menu: :guilabel:`Curve` > :guilabel:`Free-form` > :guilabel:`Interpolate` points click ABC points,enter to finish.
 
 .. image:: img/a1.png
 

@@ -2,7 +2,7 @@ Customize EA
 ============================================
 
 .. note::
-    Document of this tutorial is CustomTool.3dm , customTool . gh | Downlaod in Github_
+    Document of this tutorial is CustomEA.3dm , CustomEA.gh | Downlaod in Github_
 
 .. _Github: https://github.com/fabunion/FURDocTutorial
 
