@@ -4,7 +4,7 @@
    contain the root `toctree` directive.
 
 ********************************************
-Welcome to FUROBOT's document!
+FUROBOT documentation
 ********************************************
 
 Features:
@@ -14,8 +14,6 @@ Features:
  -  Supports KUKA, ABB, UR robots
  -  Multiple technology packages
  -  Communication with KUKA & ABB (in WIP)
-
-
 
 .. toctree::
     :maxdepth: 3
