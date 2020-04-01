@@ -2,31 +2,46 @@ Customize KUKA&ABB Robot
 ============================================
 
 .. note::
-    Document of this tutorial is CustomTool.3dm , customTool . gh | Downlaod in Github_
+    Document of this tutorial is CustomizeRobot.3dm , CustomizeRobot.gh | Downlaod in Github_
 
 .. _Github: https://github.com/fabunion/FURDocTutorial
 
+FUROBOT supports several type of robot,but still a lot of robot cannot be included.
+So we provide customize robot component for KUKA and ABB(UR is all included).
+The method to customize the robot is same in ABB and KUKA,so we provide a example on ABB:
 
-Most time,the default tool in toolbar cannot meet our request,so we need to customize tool.
-For example by KUKA,we can use 4-points method and 2-points method to get the parameter of tool,namely XYZABC.
-The detail operation of 4-points method and 2-points method will not be introduced here,you can search them in internet.
-By previous operations,we can get XYZABC parameter in robot pad,then we input them to custom tool component:
-
-
-Load tool model
+Load Robot model
 --------------------------------------------
 
-In Rhino,load the finished mesh model(in CustomTool.3dm),make sure that the **flange plane of tool is align to world plane.**
+In Rhino,load the finished robot mesh model(in CustomizeRobot.3dm)
+This model is from ABB official download center
 
-.. image:: img/a12.png
+.. image:: img/robotmesh.png
 
-Take a mesh component,pick up this tool model:
+Select the base mesh,and put it into a mesh component(you can hide other robot mesh meanwhile):
 
-.. image:: img/a13.png
+.. image:: img/R0.png
 
-Create a Custom tool component,and connect the previous components:
+Create a "Robotmesh" for this base,because its colour is black,so we input a "Colour" swatch component.
 
-.. image:: img/a14.png
+.. image:: img/R0a.png
+
+.. note::
+    RobotMesh is a minimum element for customizing robot,it has colour and mesh.
+
+This base element belongs to base part.
+
+.. note::
+    Robot part is the minimum element for robot kinetics.
+
+Base part can contain many robot elements in one time,but in base part,it only contains one element.
+So we can just connect previous robot mesh to this robot part:
+
+.. image:: img/R0b.png
+
+Then connect the robot part to ABB customize robot component:
+
+.. image:: img/R0c.png
 
 Customize tool
 --------------------------------------------

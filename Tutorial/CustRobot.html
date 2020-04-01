@@ -94,7 +94,7 @@
 <li class="toctree-l1"><a class="reference internal" href="CustTool.html">5. Customize Tool</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CustEA.html">6. Customize EA</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">7. Customize KUKA&amp;ABB Robot</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#load-tool-model">7.1. Load tool model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#load-robot-model">7.1. Load Robot model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#customize-tool">7.2. Customize tool</a></li>
 </ul>
 </li>
@@ -170,20 +170,34 @@
 <h1><span class="section-number">7. </span>Customize KUKA&amp;ABB Robot<a class="headerlink" href="#customize-kuka-abb-robot" title="Permalink to this headline">¶</a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Document of this tutorial is CustomTool.3dm , customTool . gh | Downlaod in <a class="reference external" href="https://github.com/fabunion/FURDocTutorial">Github</a></p>
+<p>Document of this tutorial is CustomizeRobot.3dm , CustomizeRobot.gh | Downlaod in <a class="reference external" href="https://github.com/fabunion/FURDocTutorial">Github</a></p>
 </div>
-<p>Most time,the default tool in toolbar cannot meet our request,so we need to customize tool.
-For example by KUKA,we can use 4-points method and 2-points method to get the parameter of tool,namely XYZABC.
-The detail operation of 4-points method and 2-points method will not be introduced here,you can search them in internet.
-By previous operations,we can get XYZABC parameter in robot pad,then we input them to custom tool component:</p>
-<div class="section" id="load-tool-model">
-<h2><span class="section-number">7.1. </span>Load tool model<a class="headerlink" href="#load-tool-model" title="Permalink to this headline">¶</a></h2>
-<p>In Rhino,load the finished mesh model(in CustomTool.3dm),make sure that the <strong>flange plane of tool is align to world plane.</strong></p>
-<img alt="../_images/a12.png" src="../_images/a12.png" />
-<p>Take a mesh component,pick up this tool model:</p>
-<img alt="../_images/a13.png" src="../_images/a13.png" />
-<p>Create a Custom tool component,and connect the previous components:</p>
-<img alt="../_images/a14.png" src="../_images/a14.png" />
+<p>FUROBOT supports several type of robot,but still a lot of robot cannot be included.
+So we provide customize robot component for KUKA and ABB(UR is all included).
+The method to customize the robot is same in ABB and KUKA,so we provide a example on ABB:</p>
+<div class="section" id="load-robot-model">
+<h2><span class="section-number">7.1. </span>Load Robot model<a class="headerlink" href="#load-robot-model" title="Permalink to this headline">¶</a></h2>
+<p>In Rhino,load the finished robot mesh model(in CustomizeRobot.3dm)
+This model is from ABB official download center</p>
+<img alt="../_images/robotmesh.png" src="../_images/robotmesh.png" />
+<p>Select the base mesh,and put it into a mesh component(you can hide other robot mesh meanwhile):</p>
+<img alt="../_images/R0.png" src="../_images/R0.png" />
+<p>Create a “Robotmesh” for this base,because its colour is black,so we input a “Colour” swatch component.</p>
+<img alt="../_images/R0a.png" src="../_images/R0a.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>RobotMesh is a minimum element for customizing robot,it has colour and mesh.</p>
+</div>
+<p>This base element belongs to base part.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Robot part is the minimum element for robot kinetics.</p>
+</div>
+<p>Base part can contain many robot elements in one time,but in base part,it only contains one element.
+So we can just connect previous robot mesh to this robot part:</p>
+<img alt="../_images/R0b.png" src="../_images/R0b.png" />
+<p>Then connect the robot part to ABB customize robot component:</p>
+<img alt="../_images/R0c.png" src="../_images/R0c.png" />
 </div>
 <div class="section" id="customize-tool">
 <h2><span class="section-number">7.2. </span>Customize tool<a class="headerlink" href="#customize-tool" title="Permalink to this headline">¶</a></h2>
