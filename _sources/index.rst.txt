@@ -16,7 +16,7 @@ Features:
  -  Communication with KUKA & ABB (in WIP)
 
 .. toctree::
-    :maxdepth: 3
+    :maxdepth: 1
     :numbered:
     :caption: TUTORIALS
 
@@ -26,6 +26,7 @@ Features:
     Tutorial/EA
     Tutorial/CustTool
     Tutorial/CustEA
+    Tutorial/CustRobot
 
 .. toctree::
     :maxdepth: 3
