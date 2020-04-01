@@ -8,7 +8,9 @@ Customize KUKA&ABB Robot
 
 FUROBOT supports several type of robot,but still a lot of robot cannot be included.
 So we provide customize robot component for KUKA and ABB(UR is all included).
-The method to customize the robot is same in ABB and KUKA,so we provide a example on ABB:
+The method to customize the robot is same in ABB and KUKA,so we provide a example on ABB(IRB 120):
+
+.. image:: img/ABB.png
 
 Load Robot model
 --------------------------------------------
@@ -17,6 +19,9 @@ In Rhino,load the finished robot mesh model(in CustomizeRobot.3dm)
 This model is from ABB official download center
 
 .. image:: img/robotmesh.png
+
+Robot element and Robot part
+--------------------------------------------
 
 Select the base mesh,and put it into a mesh component(you can hide other robot mesh meanwhile):
 
@@ -43,22 +48,41 @@ Then connect the robot part to ABB customize robot component:
 
 .. image:: img/R0c.png
 
-Customize tool
+Then we do the same thing to R1 part:
+
+.. image:: img/R1.png
+
+Because the R1 part is for rotation,so it must has a limit,we can find this limit from ABB official download center:
+
+.. image:: img/Limit.png
+
+So,R1's limit is -165~165 degrees,we add this limit to robot part:
+
+.. image:: img/R1Limit.png
+
+Connect
 --------------------------------------------
-Then a custom tool is finished,you can replace the tool of Getting Started with this custom tool:
 
-.. image:: img/a15.png
-.. image:: img/a16.png
+Then we connect this R1 part to customize robot component's R1 input.
+And do other part like these steps.
 
-Keep the XYZABC parameter,the newly done tool can also be used for ABB and UR robots.
+.. image:: img/Total.png
 
-.. image:: img/a17.png
-.. image:: img/a18.png
+Then we go to ABB offical download center to get the CAD document of this kind ABB:
 
-.. note::
-    If the tool parameter is from UR robot,then you should use URToolDataToXYZABC for convertion（ABB is similar）:
+.. image:: img/ABBCAD.png
 
-.. image:: img/a19.png
-.. image:: img/a20.png
+Then put the numbers into customize robot component:
 
+.. image:: img/ABBNum.png
+
+One thing should be mentioned: in R4 robot part,it also contains a black ABB Logo,so we need to add additional robot mesh to
+represent this logo:
+
+    
+.. image:: img/ABBLogo.png
+
+Finally,we add the tool and commands to core component,and get the result:
+
+.. image:: img/Finish.png
 

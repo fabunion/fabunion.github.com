@@ -95,7 +95,8 @@
 <li class="toctree-l1"><a class="reference internal" href="CustEA.html">6. Customize EA</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">7. Customize KUKA&amp;ABB Robot</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#load-robot-model">7.1. Load Robot model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#customize-tool">7.2. Customize tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#robot-element-and-robot-part">7.2. Robot element and Robot part</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#connect">7.3. Connect</a></li>
 </ul>
 </li>
 </ul>
@@ -174,12 +175,16 @@
 </div>
 <p>FUROBOT supports several type of robot,but still a lot of robot cannot be included.
 So we provide customize robot component for KUKA and ABB(UR is all included).
-The method to customize the robot is same in ABB and KUKA,so we provide a example on ABB:</p>
+The method to customize the robot is same in ABB and KUKA,so we provide a example on ABB(IRB 120):</p>
+<img alt="../_images/ABB.png" src="../_images/ABB.png" />
 <div class="section" id="load-robot-model">
 <h2><span class="section-number">7.1. </span>Load Robot model<a class="headerlink" href="#load-robot-model" title="Permalink to this headline">¶</a></h2>
 <p>In Rhino,load the finished robot mesh model(in CustomizeRobot.3dm)
 This model is from ABB official download center</p>
 <img alt="../_images/robotmesh.png" src="../_images/robotmesh.png" />
+</div>
+<div class="section" id="robot-element-and-robot-part">
+<h2><span class="section-number">7.2. </span>Robot element and Robot part<a class="headerlink" href="#robot-element-and-robot-part" title="Permalink to this headline">¶</a></h2>
 <p>Select the base mesh,and put it into a mesh component(you can hide other robot mesh meanwhile):</p>
 <img alt="../_images/R0.png" src="../_images/R0.png" />
 <p>Create a “Robotmesh” for this base,because its colour is black,so we input a “Colour” swatch component.</p>
@@ -198,21 +203,27 @@ So we can just connect previous robot mesh to this robot part:</p>
 <img alt="../_images/R0b.png" src="../_images/R0b.png" />
 <p>Then connect the robot part to ABB customize robot component:</p>
 <img alt="../_images/R0c.png" src="../_images/R0c.png" />
+<p>Then we do the same thing to R1 part:</p>
+<img alt="../_images/R1.png" src="../_images/R1.png" />
+<p>Because the R1 part is for rotation,so it must has a limit,we can find this limit from ABB official download center:</p>
+<img alt="../_images/Limit.png" src="../_images/Limit.png" />
+<p>So,R1’s limit is -165~165 degrees,we add this limit to robot part:</p>
+<img alt="../_images/R1Limit.png" src="../_images/R1Limit.png" />
 </div>
-<div class="section" id="customize-tool">
-<h2><span class="section-number">7.2. </span>Customize tool<a class="headerlink" href="#customize-tool" title="Permalink to this headline">¶</a></h2>
-<p>Then a custom tool is finished,you can replace the tool of Getting Started with this custom tool:</p>
-<img alt="../_images/a15.png" src="../_images/a15.png" />
-<img alt="../_images/a16.png" src="../_images/a16.png" />
-<p>Keep the XYZABC parameter,the newly done tool can also be used for ABB and UR robots.</p>
-<img alt="../_images/a17.png" src="../_images/a17.png" />
-<img alt="../_images/a18.png" src="../_images/a18.png" />
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If the tool parameter is from UR robot,then you should use URToolDataToXYZABC for convertion（ABB is similar）:</p>
-</div>
-<img alt="../_images/a19.png" src="../_images/a19.png" />
-<img alt="../_images/a20.png" src="../_images/a20.png" />
+<div class="section" id="connect">
+<h2><span class="section-number">7.3. </span>Connect<a class="headerlink" href="#connect" title="Permalink to this headline">¶</a></h2>
+<p>Then we connect this R1 part to customize robot component’s R1 input.
+And do other part like these steps.</p>
+<img alt="../_images/Total.png" src="../_images/Total.png" />
+<p>Then we go to ABB offical download center to get the CAD document of this kind ABB:</p>
+<img alt="../_images/ABBCAD.png" src="../_images/ABBCAD.png" />
+<p>Then put the numbers into customize robot component:</p>
+<img alt="../_images/ABBNum.png" src="../_images/ABBNum.png" />
+<p>One thing should be mentioned: in R4 robot part,it also contains a black ABB Logo,so we need to add additional robot mesh to
+represent this logo:</p>
+<img alt="../_images/ABBLogo.png" src="../_images/ABBLogo.png" />
+<p>Finally,we add the tool and commands to core component,and get the result:</p>
+<img alt="../_images/Finish.png" src="../_images/Finish.png" />
 </div>
 </div>
 
