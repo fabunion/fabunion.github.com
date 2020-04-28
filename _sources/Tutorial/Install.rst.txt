@@ -1,7 +1,8 @@
-Installation
+Download&Installation
 ============================================
+.. 
 
-1. From `Here <https://www.food4rhino.com/app/furobot>`_ download install files
+1. From `Github <https://github.com/fabunion/FUROBOT>`_  to download FUROBOT files
 
 2. Unzip the **FUROBOT.zip**, Copy the whole **FUROBOT** folder to Grasshopper Component Library(for example:"C:\\Users\\YourUsername\\AppData\\Roaming\\Grasshopper\\Libraries") 
 
@@ -9,4 +10,6 @@ Installation
 
 3. Make sure in this folder,no exist previous FUROBOT gha&dll(such as **FUROBOT.gha** and **FUROBOT.dll** ).If exists, just delete them.
 
-4. Restart Rhino,finish.
+4. If you need to use ABB realtime function,you may also need to install `ABB Robot Communication Runtime 6.0.exe <https://github.com/fabunion/FUROBOT>`_ 
+
+5. Restart Rhino,finish.
