@@ -1,6 +1,8 @@
 Add a start pose
 ============================================
-If you want to change default start pose,you can do like this:
+If you want to change default start pose, you can do like this:
+
+.. image:: img3/3.png
 
 Create start pose
 --------------------------------------------
@@ -17,10 +19,34 @@ Create Anglecommand component and inputs
 
 This is start pose.
 
-.. image:: img/a5.png
+.. image:: img3/2.png
 
 Merge MoveCommands
 --------------------------------------------
 Create Merge component and connect them:
 
-.. image:: img/a6.png
+.. image:: img3/1.png
+
+The start pose:
+
+.. image:: img3/5.png
+
+Change start pose
+--------------------------------------------
+Change parameters to adjust the start pose:
+
+.. code:: console
+
+    A1: 0
+    A2: -70
+    A3: 90
+    A4: 10
+    A5: -15
+    A6: -10
+
+Adjusted start pose:
+
+.. image:: img3/6.png
+
+.. image:: img3/4.png
+

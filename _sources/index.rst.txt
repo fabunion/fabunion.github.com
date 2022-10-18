@@ -11,7 +11,7 @@ Features:
 ============================================
 
  -  Off-line programming
- -  Supports KUKA, ABB, UR robots
+ -  Supports KUKA, ABB and UR robots
  -  Multiple technology packages
  -  Communication with KUKA & ABB (in WIP)
 
@@ -26,6 +26,7 @@ Features:
     Tutorial/EA
     Tutorial/CustTool
     Tutorial/CustEA
+    Tutorial/newchapter
     Tutorial/CustRobot
 
 .. toctree::

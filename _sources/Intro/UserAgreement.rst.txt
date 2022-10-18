@@ -8,7 +8,7 @@ Privacy and intellectual property
 About using products
 --------------------------------------------
 1. After the user has successfully registered, the right to use belongs only to the initial application registrant. It is forbidden to donate, borrow, rent, transfer or sell. Users should carefully save and use their username and password. The user may be responsible for theft or password theft due to improper storage by the user.
-2. Users may not upload, copy, publish, transmit or reprint the following contents while using FUROBOT：
+2. Users may not upload, copy, publish, transmit or reprint the following contents while using FUROBOT:
 
   1. against the basic principles established by the Constitution;
   2. endangering national security, leaking state secrets, subverting state power, and undermining national unity;
