@@ -8,13 +8,6 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://fabunion.github.io/zh/"/>
     </url>
     <url>
-        <loc>https://fabunion.github.io/about/</loc>
-        <lastmod>2024-02-26</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://fabunion.github.io/about/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://fabunion.github.io/zh/about/"/>
-    </url>
-    <url>
         <loc>https://fabunion.github.io/Tutorial/3_customtool/</loc>
         <lastmod>2024-02-26</lastmod>
         <changefreq>daily</changefreq>
@@ -76,13 +69,6 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://fabunion.github.io/zh/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://fabunion.github.io/"/>
-    </url>
-    <url>
-        <loc>https://fabunion.github.io/zh/about/</loc>
-        <lastmod>2024-02-26</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://fabunion.github.io/zh/about/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://fabunion.github.io/about/"/>
     </url>
     <url>
         <loc>https://fabunion.github.io/zh/Tutorial/3_customtool/</loc>
